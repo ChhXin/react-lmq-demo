@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  devtool: '(none)',
+  devtool: 'sourcemap',
   entry: './src/index',
   output: {
     path: path.resolve(__dirname, 'public/build'),
@@ -39,6 +39,7 @@ module.exports = {
     ]
   },
   devServer: {
+    disableHostCheck: true,
     port: 3000,
     historyApiFallback: {
       index: 'index.html'
